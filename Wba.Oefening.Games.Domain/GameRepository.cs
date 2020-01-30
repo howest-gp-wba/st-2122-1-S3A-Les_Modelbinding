@@ -20,7 +20,7 @@ namespace Wba.Oefening.Games.Domain
                 },
                 new Game
                 {
-                    Id = 1,
+                    Id = 2,
                     Title ="FIFA 2020",
                     Developer =
                         developerRepository.GetDevelopers().
@@ -28,7 +28,7 @@ namespace Wba.Oefening.Games.Domain
                 },
                 new Game
                 {
-                    Id = 1,
+                    Id = 3,
                     Title ="Elder Scrolls V: Skyrim",
                     Developer =
                         developerRepository.GetDevelopers().

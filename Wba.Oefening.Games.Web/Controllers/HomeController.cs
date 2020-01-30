@@ -20,10 +20,10 @@ namespace Wba.Oefening.Games.Web.Controllers
             stringBuilder.Append("<h2>Rate-a-game!</h2>");
             stringBuilder.Append("<table>");
             stringBuilder.Append("<tr>");
-            stringBuilder.Append("<td><a href=\"Games/Index\">List of Games</a></td>");
+            stringBuilder.Append("<td><a href=\"games/index\">List of Games</a></td>");
             stringBuilder.Append("</tr>");
             stringBuilder.Append("<tr>");
-            stringBuilder.Append("<td><a href=\"Developers/Index\">List of Developers</a></td>");
+            stringBuilder.Append("<td><a href=\"developers/index\">List of Developers</a></td>");
             stringBuilder.Append("</tr>");
             stringBuilder.Append("</table>");
             return Content(stringBuilder.ToString(), "text/html");

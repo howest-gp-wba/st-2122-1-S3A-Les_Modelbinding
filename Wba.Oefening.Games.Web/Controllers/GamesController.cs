@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Wba.Oefening.Games.Domain;
+using Wba.Oefening.Games.Web.Services;
 
 namespace Wba.Oefening.Games.Web.Controllers
 {
@@ -12,10 +13,12 @@ namespace Wba.Oefening.Games.Web.Controllers
     public class GamesController : Controller
     {
         private readonly GameRepository gameRepository;
+        private readonly FormattingService formattingService;
 
         public GamesController()
         {
             gameRepository = new GameRepository();
+            formattingService = new FormattingService();
         }
 
         [Route("games")]
@@ -30,7 +33,7 @@ namespace Wba.Oefening.Games.Web.Controllers
             //format data
             StringBuilder outputBuilder = new StringBuilder();
             outputBuilder.AppendLine("<h2>Games page</h2>");
-            outputBuilder.AppendLine(FormatGameInfo(games));
+            outputBuilder.AppendLine(formattingService.FormatGameInfo(games));
 
             //simple output via Content() instead of View()
             return Content(outputBuilder.ToString(), "text/html");
@@ -44,33 +47,11 @@ namespace Wba.Oefening.Games.Web.Controllers
                 .FirstOrDefault(d => d.Id == id);
 
             //format data
-            var output = FormatGameInfo(developer);
+            var output = formattingService.FormatGameInfo(developer);
 
             //simple output via Content() instead of View()
             return Content(output, "text/html");
         }
 
-        private string FormatGameInfo(Game game)
-        {
-            StringBuilder gameInfo = new StringBuilder();
-            gameInfo.Append("<h3>Game Info</h3><ul>");
-            gameInfo.Append($"<li>Game Id: {game?.Id}</li>");
-            gameInfo.Append($"<li>Title: {game?.Title}</li>");
-            gameInfo.Append($"<li>Developer: {game?.Developer.Name}</li>");
-            gameInfo.Append($"<li>Rating: {game?.Rating}</li></ul>");
-            
-            return gameInfo.ToString();
-        }
-
-        private string FormatGameInfo(IEnumerable<Game> games)
-        {
-            StringBuilder gamesInfo = new StringBuilder();
-            foreach (var game in games)
-            {
-                gamesInfo.Append(FormatGameInfo(game));
-            }
-
-            return gamesInfo.ToString();
-        }
     }
 }
