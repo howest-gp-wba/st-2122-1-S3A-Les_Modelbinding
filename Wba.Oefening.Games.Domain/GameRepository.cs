@@ -16,7 +16,7 @@ namespace Wba.Oefening.Games.Domain
                     Title = "Wolfenstein Colossus",
                     Developer = 
                         developerRepository.GetDevelopers().
-                            First(d => d.DeveloperId == 1)
+                            First(d => d.Id == 1)
                 },
                 new Game
                 {
@@ -24,7 +24,7 @@ namespace Wba.Oefening.Games.Domain
                     Title ="FIFA 2020",
                     Developer =
                         developerRepository.GetDevelopers().
-                            First(d => d.DeveloperId == 2)
+                            First(d => d.Id == 2)
                 },
                 new Game
                 {
@@ -32,7 +32,7 @@ namespace Wba.Oefening.Games.Domain
                     Title ="Elder Scrolls V: Skyrim",
                     Developer =
                         developerRepository.GetDevelopers().
-                            First(d => d.DeveloperId == 3)
+                            First(d => d.Id == 3)
                 }
             };
         }

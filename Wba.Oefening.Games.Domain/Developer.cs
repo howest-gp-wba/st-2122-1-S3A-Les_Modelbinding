@@ -2,7 +2,7 @@
 {
     public class Developer
     {
-        public int DeveloperId { get; set; }
-        public string DeveloperName { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

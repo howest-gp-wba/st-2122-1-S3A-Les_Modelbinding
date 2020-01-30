@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Wba.Oefening.Games.Web.Models;
@@ -10,9 +11,22 @@ namespace Wba.Oefening.Games.Web.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("/")]
+        [Route("home")]
+        [Route("home/index")]
         public IActionResult Index()
         {
-            return View();
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("<h2>Rate-a-game!</h2>");
+            stringBuilder.Append("<table>");
+            stringBuilder.Append("<tr>");
+            stringBuilder.Append("<td><a href=\"Games/Index\">List of Games</a></td>");
+            stringBuilder.Append("</tr>");
+            stringBuilder.Append("<tr>");
+            stringBuilder.Append("<td><a href=\"Developers/Index\">List of Developers</a></td>");
+            stringBuilder.Append("</tr>");
+            stringBuilder.Append("</table>");
+            return Content(stringBuilder.ToString(), "text/html");
         }
 
         public IActionResult About()

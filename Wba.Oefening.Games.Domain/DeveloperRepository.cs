@@ -8,9 +8,9 @@ namespace Wba.Oefening.Games.Domain
         {
             return new List<Developer>
             {
-                new Developer{DeveloperId = 1,DeveloperName = "Ubisoft" },
-                new Developer{DeveloperId = 2,DeveloperName = "EA" },
-                new Developer{DeveloperId = 3,DeveloperName = "Bethesda" }
+                new Developer{ Id = 1, Name = "Ubisoft" },
+                new Developer{ Id = 2, Name = "EA" },
+                new Developer{ Id = 3, Name = "Bethesda" }
             };
         }
     }
