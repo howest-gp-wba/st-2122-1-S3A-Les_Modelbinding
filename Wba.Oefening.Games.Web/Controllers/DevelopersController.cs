@@ -21,9 +21,6 @@ namespace Wba.Oefening.Games.Web.Controllers
             formattingService = new FormattingService();
         }
 
-        [Route("developers")]
-        [Route("developers/index")]
-        [Route("developers/all")]
         public IActionResult Index()
         {
             //get data
@@ -38,7 +35,6 @@ namespace Wba.Oefening.Games.Web.Controllers
             return Content(outputBuilder.ToString(), "text/html");
         }
 
-        [Route("developers/{id}")]
         public IActionResult ShowDeveloper(int id)
         {
             //get data (with a Linq Extension method)

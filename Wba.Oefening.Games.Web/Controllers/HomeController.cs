@@ -11,9 +11,6 @@ namespace Wba.Oefening.Games.Web.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("/")]
-        [Route("home")]
-        [Route("home/index")]
         public IActionResult Index()
         {
             StringBuilder stringBuilder = new StringBuilder();
