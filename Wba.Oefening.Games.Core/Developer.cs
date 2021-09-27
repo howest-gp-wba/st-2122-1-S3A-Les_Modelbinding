@@ -1,4 +1,4 @@
-﻿namespace Wba.Oefening.Games.Domain
+﻿namespace Wba.Oefening.Games.Core
 {
     public class Developer
     {

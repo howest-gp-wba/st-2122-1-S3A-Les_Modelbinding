@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Wba.Oefening.Games.Domain;
+using Wba.Oefening.Games.Core;
 using Wba.Oefening.Games.Web.Services;
 
 namespace Wba.Oefening.Games.Web.Controllers

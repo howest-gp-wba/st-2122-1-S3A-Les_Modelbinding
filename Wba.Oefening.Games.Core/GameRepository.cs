@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Wba.Oefening.Games.Domain
+namespace Wba.Oefening.Games.Core
 {
     public class GameRepository
     {

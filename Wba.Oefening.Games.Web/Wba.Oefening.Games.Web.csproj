@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -7,7 +7,8 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\Wba.Oefening.Games.Domain\Wba.Oefening.Games.Domain.csproj" />
+    <ProjectReference Include="..\Wba.Oefening.Games.Core\Wba.Oefening.Games.Core.csproj" />
+    <ProjectReference Include="..\Wba.Oefening.Games.Core\Wba.Oefening.Games.Core.csproj" />
   </ItemGroup>
 
 </Project>

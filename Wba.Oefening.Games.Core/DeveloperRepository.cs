@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Wba.Oefening.Games.Domain
+namespace Wba.Oefening.Games.Core
 {
     public class DeveloperRepository
     {
