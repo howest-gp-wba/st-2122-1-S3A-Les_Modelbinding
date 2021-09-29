@@ -13,7 +13,7 @@ namespace Wba.Oefening.Games.Web.Services
             gameInfo.Append("<h3>Game Info</h3><ul>");
             gameInfo.Append($"<li>Game Id: {game?.Id}</li>");
             gameInfo.Append($"<li>Title: <a href=\"/games/{game?.Id}\">{game?.Title}</a></li>");
-            gameInfo.Append($"<li>Developer: <a href=\"/games/{game?.Developer?.Id}\">{game?.Developer?.Name}</a></li>");
+            gameInfo.Append($"<li>Developer: <a href=\"/developers/{game?.Developer?.Id}\">{game?.Developer?.Name}</a></li>");
             gameInfo.Append($"<li>Rating: {game?.Rating}</li></ul>");
 
             return gameInfo.ToString();
